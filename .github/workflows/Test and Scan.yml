@@ -19,7 +19,7 @@ jobs:
     strategy:
       matrix:
         services:[tasks-api, title-normalizer] # ${{matrix.service}}
-        python-version: ["3.10", "3.11", "3.12"] # ${{matrix.python-version}}
+        python-version: [3.10, 3.11, 3.12] # ${{matrix.python-version}}
 
 
     steps:
