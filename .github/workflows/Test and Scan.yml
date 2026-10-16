@@ -29,7 +29,7 @@ jobs:
             python-version: ${{python-version}}
       - run: pip install -r servies/${{matrix.service}}/requirements.txt
       - shell: bash
-        run:pythest -rA services/${{matrix.service}} | tee ${{matrix.service}}-test-report.txt
+        run: pythest -rA services/${{matrix.service}} | tee ${{matrix.service}}-test-report.txt
       - uses: actions/upload-artifact@v7
         if: always()
         with:
